@@ -1,0 +1,12 @@
+curl localhost:5555/api/students
+
+curl localhost:5555/api/students/1
+
+curl localhost:5555/api/students/1/courses
+
+curl -X POST -H "Content-Type:application/json" -d '{"fname":"Jimothy", "lname":"Jimbo", "grad_year":2024}' localhost:5555/api/students
+curl -X POST -H "Content-Type:application/json" -d '{"student_id":1, "course_id":1, "term":"S2024"}' localhost:5555/api/students/1/enrollments
+
+curl -X PATCH -H "Content-Type:application/json" -d '{"grad_year":2023}' localhost:5555/api/students/11
+
+curl -X DELETE localhost:5555/api/students/11
